@@ -1,0 +1,23 @@
+aside{
+	display: none;
+}
+header{
+	background: #B8B8B8;
+}
+h1{
+	text-align: center;
+	color: #FFFFFF;
+	font-family: Arial,Courier,Impact,serif;
+}
+h2{
+	color: #1741E4;
+}
+section{
+	background: #6C6E77;
+}
+a{
+	display: inline-block;
+	color: #000000;
+	background: #E5E5E8;
+	font-family: serif;
+}

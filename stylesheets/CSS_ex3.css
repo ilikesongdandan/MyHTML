@@ -1,0 +1,18 @@
+span{
+	background: red;
+	height: 50px;
+	width: 75px;
+}
+div{
+	background: yellow;
+	height: 600px;
+	width: 30%;
+	float: left;
+	margin: 0 10px;
+}
+.x{
+	background: blue;
+	height: 60px;
+	width: 120px;
+	clear: both;
+}
