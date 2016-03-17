@@ -1,0 +1,42 @@
+*{
+	margin: 0;
+	padding:0;
+}
+
+#inner_box{
+	border: 1px solid #999;
+	background: #eee;
+	padding: 20px;
+	margin: 20px 20px auto;
+	overflow: auto;
+}
+#box_left{
+	float: left;
+	width: 158px;
+	border: 1px solid #999;
+	padding: 20px; 
+	background-color: white;
+}
+#left_p{
+	float: right;
+}
+#box_right{
+	float: right;
+	width: 78px;
+	border: 1px solid #999;
+	padding: 20px; 
+	background-color: white;
+}
+ul{
+	list-style: none;
+}
+.img_li{
+	margin-bottom: 15px;
+}
+#box_mid{
+	margin-left: 220px;
+	margin-right: 140px;
+	border: 1px solid #999;
+	padding: 20px; 
+	background-color: white;
+}
