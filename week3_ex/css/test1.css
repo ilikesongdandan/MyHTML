@@ -1,0 +1,46 @@
+div{
+	color: #000000;
+	background: #2db34a;
+	line-height: 20px;
+	text-align: center;
+	width: 200px;
+	height: 200px;
+	border-radius: 6px;
+	transition-property: color,width,background,border-radius;
+	transition-duration: .5s;
+	transition-timing-function: ease;
+	transition-delay: .5s
+}
+div:hover{
+	color: #FFFFFF;
+	width: 350px;
+	background: #2d31b3;
+	border-radius: 50%;
+}
+a{
+	display: inline-block;
+	background: gray;
+	color: red;
+}
+a:focus{
+	background: yellow;
+}
+#tans{
+	background: #92b901;
+	border-radius: 10px;
+	width: 200px;
+	height: 200px;
+	transition-property: background,border-radius,width,height,transform;
+	transition-duration: 0.5s;
+	transition-delay: 0.5;
+	transition-timing-function: linear;
+}
+#tans:hover{
+	width: 400px;
+	height: 400px;
+	transform: rotate(360deg);
+	background: #3c3c3c;
+}
+.hight:hover{
+	color: green;
+}

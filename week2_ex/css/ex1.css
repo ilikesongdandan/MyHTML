@@ -1,0 +1,25 @@
+p{
+	color: red;
+	padding: 10px;
+	background: black;
+}
+.fancy{
+	font-family: cursive;
+	background: red;
+	color: green;
+}
+.plain{
+	font-family: Times,serif;
+	color: black;
+}
+a{
+	text-decoration: none;
+	display: block;
+}
+.button{
+	height: 30px;
+	width: 750px;
+	color: black;
+	margin: 0 auto;
+	display: block;
+}
