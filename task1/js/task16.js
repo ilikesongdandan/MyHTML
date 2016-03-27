@@ -72,7 +72,7 @@ function delBtnHandle() {
       aqitable.deleteRow(delNode.rowIndex);
     }
   }
-   renderAqiList();
+   // renderAqiList();
 }
 
 function init() {
