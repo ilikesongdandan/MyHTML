@@ -18,7 +18,8 @@ function addAqiData() {
  var valueInput=document.getElementById('aqi-value-input');
  key=cityInput.value.trim();
  data=valueInput.value.trim();
- var keyReg=/[\u4e00-\u9fa5a-zA-Z]+/;
+ // var keyReg=/[\u4e00-\u9fa5a-zA-Z]+/;
+ var keyReg=new RegExp('[\u4e00-\u9fa5a-zA-Z]+');
  var dataReg=/[0-9]+/;
  if(!keyReg.test(key)){
  	alert('输入城市名称不合法，只能输入汉字和英文字母,请重新输入!');
