@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript">
+		var x='hello'
+		function msg(args){
+			// alert(agrs);
+			document.getElementById('output').innerHTML=args+' event';
+		}
+		function displayDate(){
+			document.getElementById('date').innerHTML=Date();
+		}
+		// welcomemsg(x);
+	</script>
+</head>
+<body onload="msg('load')" onresize="msg('resize')">
+	<h1>js events intro</h1>
+	<p onclick="msg('click')"> click here</p>
+	<p id='output'></p>	
+
+	<p id='date'>this is date</p>
+	<button type="button" onclick="displayDate()">DisplayDate</button>
+</body>
+</html>

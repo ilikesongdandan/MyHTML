@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script  src="js/js_2.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/css_2.css">
+</head>
+<body>
+<button type="button" onclick="appear()">first</button>
+<button type="button" onclick="disappear()">second</button>
+<button type="button" onclick="changeclassName1()">third</button>
+<button type="button" onclick="changeclassName2()">fourth</button>
+<button type="button" onclick="document.getElementById('demo1').innerHTML='HELLO'">change</button>
+
+<p id="demo1">hello</p>
+<p id="demo2" class="">world</p>
+<p id="demo3" class="">wangjj</p>
+
+<div>
+	<img src="images/1.png" alt="a picture" onclick="console.log(this.alt)">
+	<p>click the picture</p>
+</div>
+
+<div>
+	<img src="images/2.png" alt="a pic" onclick="displayId(this)" id="hello">
+</div>
+<hr/>
+<div id="message">hello wangjj</div>
+<div style="height: 10px;"></div>
+<img class="preview" src="images/1.png" alt='ku' onmouseover="show(this)" onmouseout="document.getElementById('message').innerHTML='hover over img'">
+
+<img class="preview" src="images/2.png" alt='suai' onmouseover="show(this)" onmouseout="document.getElementById('message').innerHTML='hover over img'">
+
+<img class="preview" src="images/3.png" alt='ganga' onmouseover="show(this)" onmouseout="document.getElementById('message').innerHTML='hover over img'">
+	
+</body>
+</html>
