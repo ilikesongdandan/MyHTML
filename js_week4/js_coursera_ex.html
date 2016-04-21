@@ -1,0 +1,128 @@
+<!DOCTYPE html><html lang="en">
+ <head>	
+  <meta charset="UTF-8">	
+    <title>Shipping and Billing</title>	
+    <style>		
+        input{			
+          border:1px solid black;
+	}		
+        input:focus{
+	   background-color: #E6E6E6;		
+        }
+	fieldset{
+ 	   margin-bottom: 4%;
+	}	
+    </style>
+    <script type="text/javascript">
+      // function billingFunction(){
+      //   if (document.getElementById('same').checked) {
+      //     document.getElementById('billingName').value=document.getElementById('shippingName').value;
+      //     document.getElementById('billingZip').value=document.getElementById('shippingZip').value;
+      //   }
+      //   else{
+      //     document.getElementById('billingName').value="";
+      //     document.getElementById('billingZip').value="";
+      //   }
+      // }
+//       function billingFunction() {
+//   if (document.getElementById("same").checked === true) {
+//     document.getElementById("billingName").value = document.getElementById("shippingName").value;
+//     document.getElementById("billingZip").value = document.getElementById("shippingZip").value;
+//     document.getElementById("billingName").disabled = true;
+//     document.getElementById("billingZip").disabled = true;
+//   } else {
+//     document.getElementById("billingName").value = "";
+//     document.getElementById("billingZip").value = "";
+//     document.getElementById("billingName").disabled = 'disabled';
+//     document.getElementById("billingZip").disabled = 'disabled';
+//   }
+// }
+
+    
+        function billingFunction(){
+            
+            
+            /* Following validations are done in this script:
+                1) Both the shipping name and zip code should have values (not null or just spaces)
+                2) The zip code must be of length 5.  THis is not validated by the input field on tabbing out of the field. 
+                3) The zip code must be numeric. (All these errors are caught by the Verify Button, but by then the Billing informaion
+                    is already auto-completed and there is no way to undo it.)
+                4) The billing information is auto-completed only when all the validations pass.
+            
+            */
+            var localName = document.getElementById("shippingName").value;
+            var localZip =  document.getElementById("shippingZip").value ;
+            
+            if (document.getElementById("same").checked){
+                
+                localName = localName.trim();  /* remove preceding and trailing spaces - checking for input of only white spaces */
+                localZip  = localZip.trim(); 
+                
+                
+                if ( localName == null ||localName == ""   ){
+                    alert("Please enter Name in Shipping Information");
+                    document.getElementById("same").checked = false;
+                    
+                }
+              
+                else if ( localZip == null ||localZip == ""){
+                     alert("Please enter 5 digit Zip code in Shipping Information");
+                     document.getElementById("same").checked = false;
+                    
+                }
+                else if(localZip.length != 5 || isNaN(localZip)){
+                     alert("Please enter 5 digit Zip Code in Shipping Information");
+                     document.getElementById("same").checked = false;                
+                    
+                }   
+                   
+                else{
+               
+                    document.getElementById("billingName").value = localName;
+                    document.getElementById("billingZip").value = localZip;
+                    
+                }
+                    
+            } /* End of " if checked" */
+                
+            else{
+                    document.getElementById("shippingName").value = null;
+                    document.getElementById("shippingZip").value = null;
+                    document.getElementById("billingName").value = null;
+                    document.getElementById("billingZip").value = null;
+                
+                
+            } /* end of if not checked */
+            
+            
+        }s
+    </script>
+  </head>
+  <body>
+	<h1>JavaScript Homework</h1>	
+        <p>Add the JavaScript code needed to enable auto-complete on this form.  Whenever the checkbox is checked, the code should automatically copy the values from Shipping Name and Shipping Zip into the Billing Name and Billing Zip.  If the checkbox is unchecked, the Billing Name and Billing Zip should go blank.</p>
+
+		<form>		
+      <fieldset>
+	      <legend>Shipping Information</legend>			  
+        <label for ="shippingName">Name:</label>		  
+        <input type = "text" name = "Name" id = "shippingName" required><br/>
+
+	      <label for = "shippingzip">Zip code:</label>		  
+        <input type = "text" name = "zip" id = "shippingZip" pattern = "[0-9]{5}" required><br/>
+      </fieldset>
+
+	    <input type="checkbox" id="same" name="same" onchange= "billingFunction()"/>		
+      <label for = "same">Is the Billing Information the Same?</label>						
+      <fieldset>
+ 	    <legend>Billing Information</legend>			  
+        <label for ="billingName">Name:</label>		  
+        <input type = "text" name = "Name" id = "billingName" required><br/>
+	      <label for = "billingzip">Zip code:</label>		  
+        <input type = "text" name = "zip" id = "billingZip" pattern = "[0-9]{5}" required><br/>
+	   </fieldset>
+
+	   <input type = "submit" value = "Verify"/>	
+    </form>
+  </body>
+</html>

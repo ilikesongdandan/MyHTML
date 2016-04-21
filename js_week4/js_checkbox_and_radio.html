@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript" src="js/js_check.js"></script>
+	<style type="text/css">
+	input{
+			border:1px solid black;
+		}
+		input:focus{
+			background-color: #E6E6E6;
+		}
+		#nick{
+			margin-left: 4%;
+			display:none;
+			width: 50%;
+		}</style>
+</head>
+<body>
+	<form>  
+  Favorite Foods<br/>
+  <label><input type="checkbox" name="food"  value = "pizza"> Pizza</label><br/>
+  
+  <label><input type="checkbox" name="food" value="Chips" >Chips</label><br/>
+  
+  <label><input type="checkbox" name="food" value="Kale">Kale</label><br/>
+  
+  
+  <input type = "submit">
+</form>
+
+<form>
+  <input type="radio" name="gender" value = "male">Male<br/>
+  
+  <input type="radio" name="gender" value="female">Female<br/>
+  
+  <input type = "submit">
+</form>
+
+<form>
+  Gender<br/>
+  <label><input type="radio" name="gender" value = "male"> Male</label><br/>
+  <label><input type="radio" name="gender" value="female">Female</label><br/><br/>
+  
+  Favorite Food<br/>
+  <label><input type="radio" name="food"  value = "pizza"> Pizza</label><br/>
+  <label><input type="radio" name="food" value="Chips" checked="true">Chips</label><br/>
+  <label><input type="radio" name="food" value="Kale">Kale</label><br/>
+  
+  <input type = "submit">
+</form>
+
+<!-- <form action="http://www.intro-webdesign.com" method = "GET"> -->
+<form>
+		<fieldset>
+			<legend>Form Verification</legend>
+  			<label for ="fName">First Name:</label>
+			<input type = "text" name = "fName" id = "fName" required><br/>
+  			<label for = "lName">Last Name:</label>
+			<input type = "text" name = "lName" id = "lName" required><br/>
+			<label for = "yesNick">Nickname?:</label>
+			<input id="yesNick" name="yesNick" type="checkbox" value="yes" onchange= "nicknameFunction()"/>	<br/>
+			    
+  		<div id = "nick">
+			<label for = "nickname">Nickname:</label>
+			<input type = "text" name = "nickname" id = "nickname"><br/>
+		</div>
+  		<input type = "submit" value = "Verify"/>
+ </fieldset>
+</form>
+
+</body>
+</html>
